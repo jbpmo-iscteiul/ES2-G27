@@ -1,0 +1,19 @@
+def imagename = "helloworld"
+def container = "container_hw"
+node {
+   echo 'Building Apache Docker Image'
+
+stage('Git Checkout') {
+    git 'https://github.com/rmves-iscteiul/es2.git'
+    }
+    
+stage('Build Docker Image'){
+     powershell "docker build -t my-java-app"
+    }
+    
+    
+stage ('Runing Container to test built Docker Image'){
+    powershell "docker run -it --rm --name my-running-app my-java-app}"
+    }
+    
+}
