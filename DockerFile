@@ -1,4 +1,5 @@
 FROM openjdk:7
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-CMD ["java", "Main"]
+COPY . /usr/src/myProject
+WORKDIR /usr/src/myProjec
+RUN gerar o jar
+CMD ["java", "jar", []
