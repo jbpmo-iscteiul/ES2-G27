@@ -2,4 +2,4 @@ FROM openjdk:7
 RUN 
 COPY . /usr/src/myProject
 WORKDIR /usr/src/myProject
-CMD ["java", "jar", []
+CMD ["java", "jar"]
