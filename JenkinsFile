@@ -6,7 +6,7 @@ node {
    echo 'Building Java Docker Image'
 
 stage('Git Checkout') {
-    git 'https://github.com/rmves-iscteiul/es2.git'
+    git 'https://github.com/jbpmo-iscteiul/ES2-G27.git'
     }
     
 stage('Build Docker Image'){
