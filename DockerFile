@@ -1,4 +1,4 @@
 FROM openjdk:7
-COPY C:/Users/UX411/Desktop/ES2/ClassA.jar C:/Users/UX411/Desktop/ES2
+COPY C:/Users/UX411/Desktop/ES2/projecto.jar C:/Users/UX411/Desktop/ES2
 WORKDIR C:/Users/UX411/Desktop/ES2
-CMD ["java", "-jar", "ClassA.jar"]
+CMD ["java", "-jar", "projecto.jar"]
