@@ -1,4 +1,4 @@
 FROM openjdk:7
-COPY . /usr/src/myProject
-WORKDIR /usr/src/myProject
-CMD ["java", "jar"]
+COPY C:/Users/UX411/Desktop/ES2/ClassA.jar C:/Users/UX411/Desktop/ES2
+WORKDIR C:/Users/UX411/Desktop/ES2
+CMD ["java", "-jar", "ClassA.jar"]
