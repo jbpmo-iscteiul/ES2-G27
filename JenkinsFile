@@ -9,13 +9,21 @@ stage('Git Checkout') {
     git 'https://github.com/rmves-iscteiul/es2.git'
     }
     
+stage('Stop Existing Container'){
+     powershell "docker stop ${container}"
+    }
+    
+stage('Remove Existing Container'){
+     powershell "docker rm ${container}"
+    }
+    
 stage('Build Docker Image'){
      powershell "docker build -t ${imagename}."
     }
     
     
 stage ('Runing Container to test built Docker Image'){
-    powershell "docker run -dit --rm --name ${container} -p 8090:80 ${imagename}"
+    powershell "docker run -dit --name ${container} -p 8090:80 ${imagename}"
     }
     
 }
