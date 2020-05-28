@@ -1,19 +1,21 @@
-def imagename = "helloworld"
-def container = "container_hw"
+def imagename = "openjdk"
+def container = "helloworld"
+
+
 node {
-   echo 'Building Apache Docker Image'
+   echo 'Building Java Docker Image'
 
 stage('Git Checkout') {
     git 'https://github.com/rmves-iscteiul/es2.git'
     }
     
 stage('Build Docker Image'){
-     powershell "docker build -t my-java-app"
+     powershell "docker build -t ${imagename}."
     }
     
     
 stage ('Runing Container to test built Docker Image'){
-    powershell "docker run -it --rm --name my-running-app my-java-app}"
+    powershell "docker run -dit --rm --name ${container} -p 8090:80 ${imagename}"
     }
     
 }
