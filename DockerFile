@@ -1,4 +1,4 @@
 FROM openjdk:7
-COPY . /C:/Users/Carolina/git/es2/27_projeto/src/main/java/Sysout
-WORKDIR /C:/Users/Carolina/git/es2/27_projeto/src/main/java/Sysout
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
 CMD ["java", "Main"]
